@@ -94,6 +94,42 @@
 	font-size: 20px
 }
 
+.footer-social .fa-youtube {
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .fa-youtube:hover {
+	color: #FF0000;
+	transform: translateY(-5px) scale(1.5);
+}
+
+.footer-social .fa-facebook-f {
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .fa-facebook-f:hover {
+	color: #316FF6;
+	transform: translateY(-5px) scale(1.5);
+}
+
+.footer-social .fa-instagram {
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .fa-instagram:hover {
+	color: #E4405F;
+	transform: translateY(-5px) scale(1.5);
+}
+
+.footer-social .fa-twitter {
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .fa-twitter:hover {
+	color: #008AD8;
+	transform: translateY(-5px) scale(1.5);
+}
+
 .newsletter_form {
 	margin-top: 35px
 }
@@ -128,16 +164,19 @@ ul.footer-contact {
 	background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.02, #000), color-stop(0.5, rgba(119, 119, 119, 0.32)), color-stop(0.98, #000));
 	margin: auto;
 }
+
 /*Responsive*/
 @media(max-width: 767px) {
 	.single-footer {
 		margin: 30px 0;
 	}
+
 	.single-footer p br {
 		display: none
 	}
 }
-@media (min-width: 768px) and (max-width: 991px){
+
+@media (min-width: 768px) and (max-width: 991px) {
 	.single-footer {
 		margin: 30px 0;
 	}

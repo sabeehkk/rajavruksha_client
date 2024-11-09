@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useHistory } from 'react-router-dom'; 
+import { useHistory } from 'react-router-dom';
 
 import projectImg1 from "../../img/project-4.jpg";
 import projectImg2 from "../../img/project-5.jpg";
@@ -43,47 +43,47 @@ const ProjectList = () => {
               </div>
             </div>
             <div className="row align-items-center justify-content-between">
-   
-              <div className="col-md-5 col-sm-6">
-              <div className="project-box" onClick={() => handleProjectClick('Sylvan Retreat')}>
+
+              <div className="col-md-5 col-sm-6 mt-5">
+                <div className="project-box" onClick={() => handleProjectClick('Sylvan Retreat')}>
                   {/* <Link to="/projects-single"> */}
-                    {/* <img src={ProjectImage} alt="img" style={{height:'600px'}}/> */}
-                    <img src={ProjectImage} alt="Sylvan Retreat" style={{ height: '600px' }} />
-                    <h3>
+                  {/* <img src={ProjectImage} alt="img" style={{height:'600px'}}/> */}
+                  <img src={ProjectImage} alt="Sylvan Retreat" style={{ height: '600px' }} />
+                  <h3>
                     Sylvan Retreat
-                      {/* <br /> IN PARIS */}
-                    </h3>
-                    <p>Nature's Beauty Celebration</p>
-                    <div className="project-zoom">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="feather feather-eye"
-                      >
-                        <path
-                          stroke="#ffffff"
-                          d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                        />
-                        <circle stroke="#ffffff" cx={12} cy={12} r={3} />
-                      </svg>
-                    </div>
+                    {/* <br /> IN PARIS */}
+                  </h3>
+                  <p>Nature's Beauty Celebration</p>
+                  <div className="project-zoom">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-eye"
+                    >
+                      <path
+                        stroke="#ffffff"
+                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                      />
+                      <circle stroke="#ffffff" cx={12} cy={12} r={3} />
+                    </svg>
+                  </div>
                   {/* </Link> */}
                 </div>
               </div>
-              <div className="col-md-5 col-sm-6">
-              <div className="project-box" onClick={() => handleProjectClick('Eco Nest', ecoNext)}>
+              <div className="col-md-5 col-sm-6 mb-5" >
+                <div className="project-box" onClick={() => handleProjectClick('Eco Nest', ecoNext)}>
                   <Link to="/projects-single">
                     {/* <img src={ecoNext} alt="img" /> */}
-                    <img src={ProjectImage} alt="img" style={{height:'600px'}}/>
+                    <img src={ProjectImage} alt="img" style={{ height: '600px' }} />
                     <h3>
-                       Eco Nest
+                      Eco Nest
                       {/* <br /> IN BAHRAIN */}
                     </h3>
                     <p>Eco Acres </p>

@@ -19,10 +19,10 @@ import "./style.css";
 const ServiceSection = () => {
   return (
     <section className="service-area ">
-      <div style={{justifyContent:'center',alignItems:'center',margin:'auto',display:'flex'}}>
-       <span style={{marginRight:'15px' ,color:'#c6993e'}}>....................</span> <img style={{width:'40px',height:'40px'}} src="https://rajavrukshagroup.in/wp-content/uploads/2023/11/plant-1.png" alt="" /> <span style={{marginLeft:'15px' ,color:'#c6993e'}}>....................</span>
+      <div style={{ justifyContent: 'center', alignItems: 'center', margin: 'auto', display: 'flex' }}>
+        <span style={{ marginRight: '15px', color: '#c6993e' }}>....................</span> <img style={{ width: '40px', height: '40px' }} src="https://rajavrukshagroup.in/wp-content/uploads/2023/11/plant-1.png" alt="" /> <span style={{ marginLeft: '15px', color: '#c6993e' }}>....................</span>
       </div>
-      <h1 style={{textAlign:'center',marginTop:'29px'}}>Our Working Process</h1>
+      <h1 style={{ textAlign: 'center', marginTop: '29px' }}>Our Working Process</h1>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-3 col-md-6">
@@ -30,28 +30,23 @@ const ServiceSection = () => {
               className="service-box"
               data-aos="fade-up"
               data-aos-delay="200"
+              style={{ height: "91%" }}
             >
-                <div className="step-header-container" style={{backgroundColor:'#c6993e',borderRadius:'50px'}}>
-                  <div className="step-header" style={{backgroundColor:'#c6993e',width:'100px'}}>STEP 01 </div>
-                </div>
-              <div className="service-icon">
-                <img src={targetIcon}  alt="img" />
+              <div className="step-header-container" style={{ backgroundColor: '#c6993e', borderRadius: '50px' }}>
+                <div className="step-header" style={{ backgroundColor: '#c6993e', width: '100px' }}>STEP 01 </div>
               </div>
-          {/* <div className="service-icon">
-                  <img src={plantingIcon} style={{ width: '100px', height: '100px', filter: 'hue-rotate(60deg)' }} alt="img" />
-              </div> */}
+              <div className="service-icon">
+                <img src={targetIcon} alt="img" />
+              </div>
               <div className="service-text">
                 <h4>
-                Aim on Independent Assessments:
+                  Aim on Independent Assessments:
                 </h4>
-              <p>
-              We aim to provide an independent assessment that examines all aspects of a proposed project, including technical, economic, financial, legal and environmental considerations.
-              </p>
-                {/* <Link to="/service-single" className="cta-btn btn-border">
-                  Read More
-                </Link> */}
+                <p>
+                  We aim to provide an independent assessment that examines all aspects of a proposed project, including technical, economic, financial, legal and environmental considerations.
+                </p>
+
               </div>
-              {/* <img src={''} alt="img" /> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -59,27 +54,21 @@ const ServiceSection = () => {
               className="service-box"
               data-aos="fade-up"
               data-aos-delay="350"
+              style={{ height: "91%" }}
             >
-             <div className="step-header-container" style={{backgroundColor:'#c6993e',borderRadius:'50px'}}>
-                  <div className="step-header" style={{backgroundColor:'#c6993e',width:'100px'}}>STEP 02 </div>
-                </div>
-              <div className="service-icon">
-                <img src={identification}  alt="img" />
+              <div className="step-header-container" style={{ backgroundColor: '#c6993e', borderRadius: '50px' }}>
+                <div className="step-header" style={{ backgroundColor: '#c6993e', width: '100px' }}>STEP 02 </div>
               </div>
-          {/* <div className="service-icon">
-                  <img src={plantingIcon} style={{ width: '100px', height: '100px', filter: 'hue-rotate(60deg)' }} alt="img" />
-              </div> */}
+              <div className="service-icon">
+                <img src={identification} alt="img" />
+              </div>
               <div className="service-text">
                 <h4>
-                Land Identification and Acquisition</h4>
-              <p>
-              Specializing in pinpointing ideal land prospects, we meticulously evaluate for suitability, fertility, and strategic value. Our process ensures precise acquisition, securing prime plots for diverse agricultural pursuits.
-              </p>
-                {/* <Link to="/service-single" className="cta-btn btn-border">
-                  Read More
-                </Link> */}
+                  Land Identification and Acquisition</h4>
+                <p>
+                  Specializing in pinpointing ideal land prospects, we meticulously evaluate for suitability, fertility, and strategic value. Our process ensures precise acquisition, securing prime plots for diverse agricultural pursuits.
+                </p>
               </div>
-              {/* <img src={serviceImg3} alt="img" /> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -87,23 +76,24 @@ const ServiceSection = () => {
               className="service-box"
               data-aos="fade-up"
               data-aos-delay="500"
-               >
-                 <div className="step-header-container" style={{backgroundColor:'#c6993e',borderRadius:'50px'}}>
-                  <div className="step-header" style={{backgroundColor:'#c6993e',width:'100px'}}>STEP 03 </div>
-                </div>
+              style={{ height: "91%" }}
+            >
+              <div className="step-header-container" style={{ backgroundColor: '#c6993e', borderRadius: '50px' }}>
+                <div className="step-header" style={{ backgroundColor: '#c6993e', width: '100px' }}>STEP 03 </div>
+              </div>
               <div className="service-icon" >
                 {/* <img src={serviceIcon2} alt="img" /> */}
-                <img src={Check}  alt="img" />
+                <img src={Check} alt="img" />
               </div>
               <div className="service-text">
                 <h4>
-                Project Delivery</h4>
+                  Project Delivery</h4>
                 <p>
-                We assure to deliver more than just a project, we deliver a vision realized, a dream fulfilled and projects where every detail has been crafted to perfection.
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                  We assure to deliver more than just a project, we deliver a vision realized, a dream fulfilled and projects where every detail has been crafted to perfection.
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                 </p>
                 {/* <Link to="/service-single" className="cta-btn btn-border">
                   Read More
@@ -117,20 +107,21 @@ const ServiceSection = () => {
               className="service-box"
               data-aos="fade-up"
               data-aos-delay="650"
+              style={{ height: "91%" }}
             >
-              <div className="step-header-container" style={{backgroundColor:'#c6993e',borderRadius:'50px'}}>
-                  <div className="step-header" style={{backgroundColor:'#c6993e',width:'100px'}}>STEP 04 </div>
-                </div>
+              <div className="step-header-container" style={{ backgroundColor: '#c6993e', borderRadius: '50px' }}>
+                <div className="step-header" style={{ backgroundColor: '#c6993e', width: '100px' }}>STEP 04 </div>
+              </div>
               <div className="service-icon">
                 {/* <img src={serviceIcon3} alt="img" /> */}
-                <img src={Management}  alt="img" />
+                <img src={Management} alt="img" />
               </div>
               <div className="service-text">
                 <h4>
-                Property Management & Maintenance</h4>
-                <br/>
+                  Property Management & Maintenance</h4>
+                <br />
                 <p>
-                Our team focuses on maintenance of the Projects to retain its aesthetic appearance in order to ensure that your investment retains and appreciates its value.
+                  Our team focuses on maintenance of the Projects to retain its aesthetic appearance in order to ensure that your investment retains and appreciates its value.
                 </p>
                 {/* <Link to="/service-single" className="cta-btn btn-border">
                   Read More

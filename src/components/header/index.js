@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
-import  Logo from '../../components/assets/RRPL_Horizontal.png'
+import Logo from '../../components/assets/RRPL_Horizontal.png'
 
 import "./style.css";
 
@@ -15,10 +15,10 @@ const Header = () => {
   const onClick = (e) => {
     e.preventDefault();
   };
-  
+
+
   return (
-    
-    <header className="header"  style={{paddingLeft:'20px'}}>
+    <header className="header" style={{ paddingLeft: '20px' }}>
       <div className="row">
         <div className="col-lg-12">
           <div className="header-inn">
@@ -38,21 +38,21 @@ const Header = () => {
                       <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <Link to="/" onClick={onClick}>
+                      <Link to="/projects">
                         Projects
                       </Link>
                       <ul>
-                        <li>
+                        {/* <li>
                           <Link to="/projects">Project</Link>
-                        </li>
+                        </li> */}
                         {/* <li>
                           <Link to="/projects-single">Project Details</Link>
                         </li> */}
                       </ul>
                     </li>
                     <li>
-                      <Link to="/careers">Careers</Link>
-                      </li>
+                      <Link to="/careers">Career</Link>
+                    </li>
                     {/* <li>
                       <Link to="/" onClick={onClick}>
                         Service
@@ -109,25 +109,25 @@ const Header = () => {
               </div>
               <div className="header-action">
                 <div to="/contact" className="header-btn" style={{ marginRight: '20px' }}>
-                  
-                   <Link
+
+                  <Link
                     to="#"
                     onClick={() => window.open('https://wa.me/916366930174', '_blank')}
-                      >
-                  <i style={{marginRight:'20px'}} class="fab fa-whatsapp"></i>
+                  >
+                    <i style={{ marginRight: '20px' }} class="fab fa-whatsapp"></i>
                   </Link>
                   <Link
                     to="#"
-                    onClick={() => window.open('https://www.youtube.com/@rajavruksharealtorspvtltd.', '_blank')}
-                      >
-                  <i  style={{marginRight:'20px'}} class="fab fa-youtube"></i>
+                    onClick={() => window.open('https://www.youtube.com/@Rajavruksha_Realtors', '_blank')}
+                  >
+                    <i style={{ marginRight: '20px' }} class="fab fa-youtube"></i>
                   </Link>
                   <Link
-                  to="#"
-                  onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
-                    >
-                <i style={{marginRight:'20px'}} className="fab fa-facebook-f" />
-                </Link>
+                    to="#"
+                    onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
+                  >
+                    <i style={{ marginRight: '20px' }} className="fab fa-facebook-f" />
+                  </Link>
                 </div>
               </div>
               <div

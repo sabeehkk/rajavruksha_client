@@ -14,15 +14,15 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-sm-6 order-lg-1 order-1">
-              
+
               <div className="single-footer">
                 <h3>About</h3>
                 <p>
-                  We guide you in selecting the best property 
+                  We guide you in selecting the best property
                   <br />that aligns with your vision and goals
                 </p>
                 <ul className="footer-contact">
-                <h3>Contact Details</h3>
+                  <h3>Contact Details</h3>
                   <li>
                     <i className="fas fa-phone-square-alt" /> +91 8549 955 955
                   </li>
@@ -40,24 +40,24 @@ const Footer = () => {
                 <h3>Qucik Links</h3>
                 <ul>
                   <li>
-                    <Link to="/">About Us</Link>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link to="/">Our Projects</Link>
+                    <Link to="/projects">Our Projects</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/">Our Services</Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link to="/">Meet The Team</Link>
-                  </li>
+                  </li> */}
                   <li>
-                    <Link to="/">Contact</Link>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="col-lg-2 col-sm-6 order-lg-3 order-4">
               <div className="single-footer">
                 <h3>Office Timings</h3>
@@ -69,7 +69,7 @@ const Footer = () => {
                     <p >09:30 am : 06:30 pm</p>
                   </li>
                   <li>
-                    <p style={{color:'white'}}>Weekly Off:</p>
+                    <p style={{ color: 'white' }}>Weekly Off:</p>
                   </li>
                   <li>
                     <p >Tuesday</p>
@@ -94,31 +94,36 @@ const Footer = () => {
                 </div>
                 <ul className="footer-social">
                   <li>
-                  <Link
-                    to="#"
-                    onClick={() => window.open('https://www.youtube.com/@rajavruksharealtorspvtltd.', '_blank')}
-                      >
-                  <i class="fab fa-youtube"></i>
-                  </Link>
-                  </li>
-                  <li>
-                  <Link
+                    <Link
                       to="#"
-                      onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
-                        >
-                    <i className="fab fa-facebook-f" />
+                      // onClick={() => window.open('https://www.youtube.com/@rajavruksharealtorspvtltd.', '_blank')}
+                      onClick={() => window.open('https://www.youtube.com/@Rajavruksha_Realtors', '_blank')}
+
+                    >
+                      <i class="fab fa-youtube"></i>
                     </Link>
                   </li>
                   <li>
-                  <Link
-                    to="#"
-                    onClick={() => window.open('https://www.instagram.com/rajavruksha', '_blank')}
-                      >
-                    <i className="fab fa-instagram" />
-                  </Link>
+                    <Link
+                      to="#"
+                      onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
+                    >
+                      <i className="fab fa-facebook-f" />
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link
+                      to="#"
+                      onClick={() => window.open('https://www.instagram.com/rajavruksha', '_blank')}
+                    >
+                      <i className="fab fa-instagram" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      onClick={() => window.open('https://x.com/rajavruksha', '_blank')}
+                    >
                       <i className="fab fa-twitter" />
                     </Link>
                   </li>

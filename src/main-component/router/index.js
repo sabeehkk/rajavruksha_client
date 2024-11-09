@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Homepage from '../HomePage'
 import AboutPage from '../AboutPage'
@@ -22,33 +22,37 @@ import JourneySection from "../../components/reactIcons/journeySection.jsx"
 import Status from '../Status/status.jsx';
 import Amenities from "../../components/Amenities/amenities.jsx";
 
-const AllRoute = () => { 
+
+
+const AllRoute = () => {
   return (
     <div>
-       <Router>
-          <Switch>
-            <Route exact path='/' component={Homepage}/>
-            <Route path='/home' component={Homepage} />
-            <Route path='/about' component={AboutPage} />
-            <Route path='/projects' component={ProjectPage} />
-            <Route path='/projects-single' component={ProjectSinglePage} />
-            <Route path='/service' component={ServicePage} />
-            <Route path='/service-single' component={ServiceSinglePage} />
-            <Route path='/portfolio' component={PortfolioPage} />
-            <Route path='/team' component={TeamPage} />
-            <Route path='/faq' component={FaqPage} />
-            <Route path='/contact' component={ContactPage} />
-            <Route path='/404' component={ErrorPage} />
-            <Route path='/blog' component={BlogPage} />
-            <Route path='/blog-single' component={BlogSinglePage} />
-            <Route path='/experienceSection' component={ExperienceSection}/>
-            <Route path='/careers' component={Careers}/>
-            <Route path='/sylvan-retreat' component={SylvanRetreat}/>
-            <Route path='/eco-nest' component={Econest}/>
-            <Route path='/journeySection' component={JourneySection}/>
-            <Route path='/status' component={Status}/>
-            <Route path='/amenities' component={Amenities}/>
-          </Switch>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Homepage} />
+          <Route path='/home' component={Homepage} />
+          <Route path='/about' component={AboutPage} />
+          <Route path='/projects' component={ProjectPage} />
+          <Route path='/projects-single' component={ProjectSinglePage} />
+          <Route path='/service' component={ServicePage} />
+          <Route path='/service-single' component={ServiceSinglePage} />
+          <Route path='/portfolio' component={PortfolioPage} />
+          <Route path='/team' component={TeamPage} />
+          <Route path='/faq' component={FaqPage} />
+          <Route path='/contact' component={ContactPage} />
+          <Route path='/404' component={ErrorPage} />
+          <Route path='/blog' component={BlogPage} />
+          <Route path='/blog-single' component={BlogSinglePage} />
+          <Route path='/experienceSection' component={ExperienceSection} />
+          <Route path='/careers' component={Careers} />
+          <Route path='/sylvan-retreat' component={SylvanRetreat} />
+          <Route path='/eco-nest' component={Econest} />
+          <Route path='/journeySection' component={JourneySection} />
+          <Route path='/status' component={Status} />
+          <Route path='/amenities' component={Amenities} />
+
+          <Route path="*" component={ErrorPage} />
+        </Switch>
       </Router>
     </div>
   );

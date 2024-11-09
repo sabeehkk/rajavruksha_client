@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./jobCareer.css"
-import axios from 'react-axios';
+
 
 const CareerForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    contact_no: "",
     file: null,
   });
   const [errors, setErrors] = useState({});
+  const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,28 +24,40 @@ const CareerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = {};
-  
+
     // Form validation
-    if (!formData.name) formErrors.name = "Name is required.";
-    if (!formData.email) formErrors.email = "This field is required. Please input a valid email.";
-    if (!formData.phone) formErrors.phone = "This field is required. Please input a phone number.";
-  
+    if (!formData.name) formErrors.name = "Enter the name";
+    if (!formData.email) formErrors.email = "Please enter a valid email.";
+    if (!formData.contact_no) formErrors.contact_no = "Please enter a phone number.";
+    if (!formData.file) formErrors.file = "Please upload a file.";
+
     setErrors(formErrors);
-  
+
     // If there are no form errors, proceed with submitting the data
     if (Object.keys(formErrors).length === 0) {
       try {
+        const formDataToSubmit = new FormData();
+        formDataToSubmit.append("name", formData.name);
+        formDataToSubmit.append("email", formData.email);
+        formDataToSubmit.append("contact_no", formData.contact_no);
+        formDataToSubmit.append("file", formData.file);
+
         const response = await fetch("http://localhost:3000/careerForm", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(formData)
+          body: formDataToSubmit
         });
-  
+
         if (response.ok) {
           const data = await response.json();
           console.log("Form submitted successfully", data);
+          alert("Form Submitted Successfully")
+          setFormData({
+            name: "",
+            email: "",
+            contact_no: "",
+            file: null,
+          })
+          fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
         }
@@ -53,6 +66,7 @@ const CareerForm = () => {
       }
     }
   };
+
 
   return (
     <section className="containers" >
@@ -85,7 +99,7 @@ const CareerForm = () => {
         <h4>Salary</h4>
         <p>15K-30K</p>
       </div>
-      <form className="career-form" data-aos="fade-left"  onSubmit={handleSubmit} typeof="intype">
+      <form className="career-form" data-aos="fade-left" onSubmit={handleSubmit} enctype="multipart/form-data">
         <h2>Career Form</h2>
         <div className="form-group">
           <input
@@ -110,25 +124,28 @@ const CareerForm = () => {
         <div className="form-group">
           <input
             type="text"
-            name="phone"
+            name="contact_no"
             placeholder="Phone no"
-            value={formData.phone}
+            value={formData.contact_no}
             onChange={handleChange}
           />
-          {errors.phone && <span className="error">{errors.phone}</span>}
+          {errors.contact_no && <span className="error">{errors.contact_no}</span>}
         </div>
 
-        <div className="form" >
+        <div className="form" style={{ marginLeft: "1rem",backgroundColor:'white' }}>
           <label htmlFor="file">Upload CV *</label>
-          <input 
+          <input
             type="file"
             id="file"
+            name="file"
+            ref={fileInputRef}
             onChange={handleFileChange}
             accept=".doc,.docx,.pdf"
-            />
+          />
+          {errors.file && <span className="error" style={{ marginLeft: "0rem", marginTop: "-13px" }}>{errors.file}</span>}
         </div>
-      
-        <div className="form-group">
+
+        <div className="form-group" style={{ marginLeft: "1rem" }}>
           {/* <input type="checkbox" id="consent" required /> */}
           <label htmlFor="consent">
             I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via phone and
@@ -138,8 +155,6 @@ const CareerForm = () => {
             override the registry on DND/NDNC.
           </label>
         </div>
-
-        
         <button type="submit" className="submit-button">
           Send Message
         </button>
