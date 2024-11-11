@@ -8,15 +8,15 @@ import CareersPage from '../../components/careers/careers.jsx'
 import bg from "../../components/assets/careersedited.jpg";
 import JobCareer from "../../components/careers/jobCareer.jsx"
 import Footer from '../../components/footer/index.js'
-import CareerPage from '../../components/careers/careerPage.jsx'
+// import CareerPage from '../../components/careers/careerPage.jsx'
 
 const Careers = () => {
   return (
     <Fragment>
       <Header />
       <PageTitle pageTitle={'Career'} pagesub={'career'} pageImg={bg} />
-      {/* <JobCareer/> */}
-      <CareerPage />
+      <JobCareer/>
+      {/* <CareerPage /> */}
       <Footer />
       {/* <Partners/> */}
     </Fragment>

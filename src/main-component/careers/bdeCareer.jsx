@@ -9,18 +9,20 @@ import bg from "../../components/assets/careersedited.jpg";
 import JobCareer from "../../components/careers/jobCareer.jsx"
 import Footer from '../../components/footer/index.js'
 import CareerPage from '../../components/careers/careerPage.jsx'
+import CareerForm from '../../components/careers/jobCareer.jsx'
 
-const Careers = () => {
-  return (
-    <Fragment>
-      <Header />
-      <PageTitle pageTitle={'Career'} pagesub={'career'} pageImg={bg} />
-      {/* <JobCareer/> */}
-      <CareerPage />
-      <Footer />
-      {/* <Partners/> */}
-    </Fragment>
-  )
+const BdeCareerMain = () => {
+    const subtitle = "Business Development Executive"
+    return (
+        <Fragment>
+            <Header />
+            <PageTitle pageTitle={'Career'} pagesub={'career'} subtitle={subtitle} pageImg={bg} />
+            {/* <JobCareer/> */}
+            <CareerForm />
+            <Footer />
+            {/* <Partners/> */}
+        </Fragment>
+    )
 }
 
-export default Careers
+export default BdeCareerMain;

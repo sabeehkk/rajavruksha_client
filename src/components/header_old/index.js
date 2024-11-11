@@ -51,11 +51,7 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link to="/">Career</Link>
-                      <ul>
-                        <li><Link to="bdeCareerForm">BDE</Link></li>
-                        <li><Link to="bdeIntern">BDE Intern</Link></li>
-                      </ul>
+                      <Link to="/careers">Career</Link>
                     </li>
                     {/* <li>
                       <Link to="/" onClick={onClick}>

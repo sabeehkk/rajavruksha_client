@@ -45,7 +45,7 @@
 
 .contact-form {
 	position: relative;
-	background-image: url(../../img/project-2.png);
+	/* background-image: url(../../img/project-2.png); */
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -86,7 +86,7 @@
 
 .contact-form textarea {
 	color: #111;
-	height: 200px;
+	height: 103px;
 	padding: 10px;
 	width: 100%;
 }

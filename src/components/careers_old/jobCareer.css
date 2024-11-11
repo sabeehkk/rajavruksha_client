@@ -32,16 +32,6 @@
   line-height: 1.5;
 }
 
-.list-methods{
-  margin-bottom: 10px;
-}
-
-.list-methods li{
-  list-style-type: disc;
-  margin-left: 40px;
-}
-
-
 .career-form {
   flex: 1;
   background: #ffffff;
@@ -118,11 +108,6 @@ input::placeholder {
 
 .submit-button:hover {
   background: #ff9800;
-}
-
-
-.car-ind {
-  padding: 2rem;
 }
 
 @media (max-width: 768px) {

@@ -133,8 +133,8 @@ const CareerForm = () => {
         </div>
 
         <div className="form" style={{ marginLeft: "1rem" }}>
-          <label htmlFor="file">Upload CV *</label>
-          <input
+          <label  htmlFor="file">Upload CV *</label>
+          <input 
             type="file"
             id="file"
             name="file"

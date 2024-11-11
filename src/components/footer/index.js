@@ -21,7 +21,7 @@ const Footer = () => {
                   We guide you in selecting the best property
                   <br />that aligns with your vision and goals
                 </p>
-                <ul className="footer-contact">
+                <ul className="footer-contact ">
                   <h3>Contact Details</h3>
                   <li>
                     <i className="fas fa-phone-square-alt" /> +91 8549 955 955
@@ -92,7 +92,7 @@ const Footer = () => {
                     </button>
                   </form>
                 </div>
-                <ul className="footer-social">
+                {/* <ul className="footer-social">
                   <li>
                     <Link
                       to="#"
@@ -127,7 +127,26 @@ const Footer = () => {
                       <i className="fab fa-twitter" />
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
+
+                	<div  style={{paddingTop:'30px'}} class="social">
+              <ul class="no-list">
+                 
+        <Link  onClick={() => window.open('https://www.youtube.com/@Rajavruksha_Realtors', '_blank')} target="_blank">
+            <li class="youtube"> <i class="fab fa-youtube"></i></li>
+        </Link>
+        <Link  onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')} target="_blank">
+            <li class="facebook"> <i class="fab fa-facebook"></i></li>
+        </Link>
+        <Link  onClick={() =>  window.open('https://www.instagram.com/rajavruksha', '_blank')} target="_blank">
+            <li class="instagram"> <i class="fab fa-instagram"></i></li>
+        </Link>
+        <Link   onClick={() => window.open('https://x.com/rajavruksha', '_blank')} target="_blank">
+            <li class="twitter"> <i class="fab fa-twitter"></i></li>
+        </Link>
+     
+    </ul>
+</div>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ import Testimonial from '../../components/testimonial';
 import BlogSection from '../../components/BlogSection';
 import Footer from '../../components/footer';
 import Container from "../Status/status.jsx"
-import OngoingProjects from '../../components/ongoingProjects/ongoingProjects.jsx';
+import OngoingProjects from '../../components/ourOnGoingProjects/ourOnGoingProjects.jsx';
 
 const HomePage =() => {
     return(
@@ -19,7 +19,9 @@ const HomePage =() => {
             <Hero/>
             <Container />
             <About text={''}/>
+            <OngoingProjects/>
             <ServiceSection/>
+            
             {/* <OngoingProjects/> */}
             {/* <Partners/> */}
             {/* <ProjectSection/> */}

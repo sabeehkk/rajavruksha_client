@@ -21,11 +21,7 @@ import Econest from "../projects/eco-nest";
 import JourneySection from "../../components/reactIcons/journeySection.jsx"
 import Status from '../Status/status.jsx';
 import Amenities from "../../components/Amenities/amenities.jsx";
-import CareerPage from '../../components/careers/careerPage.jsx';
-import CareerForm from '../../components/careers/jobCareer.jsx';
-import BdeInternCareer from '../../components/careers/bdeIntCareer.jsx';
-import BdeCareerMain from '../careers/bdeCareer.jsx';
-import BdeInternCareerMain from '../careers/bdeInternCareer.jsx';
+import OngoingProjects from '../../components/ourOnGoingProjects/ourOnGoingProjects.jsx';
 
 
 
@@ -50,15 +46,12 @@ const AllRoute = () => {
           <Route path='/blog-single' component={BlogSinglePage} />
           <Route path='/experienceSection' component={ExperienceSection} />
           <Route path='/careers' component={Careers} />
-          {/* <Route path='/careers' component={CareerPage} /> */}
-          <Route path="/bdeCareerForm" component={BdeCareerMain} />
-          <Route path="/bdeIntern" component={BdeInternCareerMain} />
           <Route path='/sylvan-retreat' component={SylvanRetreat} />
           <Route path='/eco-nest' component={Econest} />
           <Route path='/journeySection' component={JourneySection} />
           <Route path='/status' component={Status} />
           <Route path='/amenities' component={Amenities} />
-
+          <Route path='/ourgoing' component={OngoingProjects} />
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Router>

@@ -55,8 +55,6 @@ const PageTitle = (props) => {
           <div className="col-lg-12">
             <div className="breadcrumb-inn">
               <h1>{props.pageTitle}</h1>
-              <h2 className="subtitle">{props?.subtitle && props?.subtitle}</h2>
-              <h2 className="subtitle">{props?.intSubtitle && props?.intSubtitle}</h2>
               {/* <ul>
                 <li className="home">
                   <Link to="/">
