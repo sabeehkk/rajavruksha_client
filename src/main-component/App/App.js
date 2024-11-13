@@ -5,6 +5,7 @@ import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import 'aos/dist/aos.css';
 import './App.css';
 import '../../index.css';
+//minor issues
 
 const App = () => {
     useEffect(() => {
