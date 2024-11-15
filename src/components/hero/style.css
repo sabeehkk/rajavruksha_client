@@ -2,7 +2,10 @@
 .hero-area {
 	padding: 0;
 	position: relative;
+	background: linear-gradient(180deg, #f5f7f9 0%, rgb(235, 244, 248) 30%, #dcf7ff 100%);
 }
+
+
 
 .hero-area .hero-slide-item {
 	height: 75vh;
@@ -26,7 +29,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #02050b;
+	/* background: #02050b; */
 	opacity: 0.5;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	z-index: -1
@@ -242,26 +245,26 @@
 }
 
 .hero-slider .hero_arrows {
-	padding-left: 10%;
+	padding-left: 2%;
 	position: absolute;
-	bottom: 30px;
+	bottom: 90px;
 	z-index: 11
 }
 
 .hero-slider .hero_arrows button {
 	width: 50px;
 	height: 50px;
-	border: 1px solid #737373 !important;
+	/* border: 1px solid #737373 !important; */
 	color: #737373 !important;
-	margin-right: 10px;
+	margin-right: -23px;
 	border-radius: 50%;
-	font-size: 20px !important;
+	font-size: 32px !important;
 	-webkit-transition: all 0.4s ease 0s;
 	/* transition: all 0.4s ease 0s */
 }
 
 .hero-slider .hero_arrows button:hover {
-	border: 1px solid #fff !important;
+	/* border: 1px solid #fff !important; */
 	color: #fff !important;
 }
 
@@ -281,6 +284,9 @@
 	}
 }
 @media(max-width: 767px){
+	.new-carousel {
+		display: none;
+	  }
 	.hero-text h2 {
 		font-size: 40px;
 		letter-spacing: 3px;
@@ -307,7 +313,7 @@
 		display: none;
 	}
 	.hero-slider .hero_arrows {
-		padding-left: 60px;
+		padding-left: 0px;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);

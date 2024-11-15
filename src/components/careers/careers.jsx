@@ -83,7 +83,7 @@ const Careers = () => {
               </div>
             </div>
             <div className="about-right" data-aos="fade-left">
-              <img className="about_img_1" src={img2} alt="img" />
+              {/* <img className="about_img_1" src={img2} alt="img" /> */}
               <img className="about_img_2" src={img1} alt="img" />
             </div>
           </div>

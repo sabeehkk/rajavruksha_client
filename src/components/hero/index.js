@@ -11,22 +11,32 @@ import field from "../../components/assets/field.jpg";
 import Container from "../../main-component/Status/status.jsx"
 
 import "./style.css";
+import NewCarousel from "../newCarousel/newCarousel.jsx";
 
 class Hero extends Component {
   constructor(props) {
     super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
+    this.state = {
+      isMobile: window.innerWidth <= 767,
+    };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-  next() {
-    this.slider.slickNext();
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
-  previous() {
-    this.slider.slickPrev();
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ isMobile: window.innerWidth <= 767 });
   }
 
   render() {
-    var settings = {
+    const { isMobile } = this.state;
+    const settings = {
       dots: false,
       arrows: false,
       speed: 1200,
@@ -37,15 +47,17 @@ class Hero extends Component {
       fade: true,
     };
 
+
     return (
       <section className="hero-area" >
         <div className="hero-slider">
           <div className="hero_arrows">
+        {!isMobile && <NewCarousel />}
             <button className="button" onClick={this.previous}>
-              <i className="fas fa-angle-left"></i>
+              <i className="fas "></i>
             </button>
             <button className="button" onClick={this.next}>
-              <i className="fas fa-angle-right"></i>
+              <i className="fas fa-angle-righ"></i>
             </button>
           </div>
           <Slider ref={(c) => (this.slider = c)} {...settings}>
@@ -55,14 +67,15 @@ class Hero extends Component {
                 // style={{ backgroundImage: `url(${field})` }}
                 style={{
                       backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`
-                    }}
+                    }} 
                     >
                 <div className="container">
                   <div className="hero-text">
-                    <h2>
+                    <h2 style={{color:'black',fontSize:'50px'}}>
                      Plow Your Capital into<br/>
                       Farmland for Growth
                     </h2>
+                    
                     <div className="hero-action">
                       <Link to="/projects" className="cta-btn btn-fill">
                         See Projects
@@ -72,31 +85,23 @@ class Hero extends Component {
                       </Link>
                     </div>
                   </div>
-                  <div className="video-main">
-                    <div className="promo-video">
-                      <div className="waves-block">
-                        <div className="waves wave-1" />
-                        <div className="waves wave-2" />
-                        <div className="waves wave-3" />
-                      </div>
-                    </div>
-                    <VideoModal videoId="bFYc54lb9kE" />
-                  </div>
+                
                 </div>
+                
               </div>
             </div>
            <div className="slide">
               <div
                 className="hero-slide-item"
                 // style={{ backgroundImage: `url(${field})` }}
-                style={{
-                      backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`
-                  }}
+                // style={{
+                //       backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`
+                //   }}
               >
                 <div className="container">
                   <div className="hero-text">
                     
-                    <h2>
+                    <h2 style={{color:'black',fontSize:'50px'}}>
                     Invest in Farmland for <br/>
                     Long-Term Prosperity
                     </h2>
@@ -108,8 +113,11 @@ class Hero extends Component {
                         Get Contact
                       </Link>
                     </div>
+
+                    
                   </div>
-                  <div className="video-main">
+                  
+                  {/* <div className="video-main">
                     <div className="promo-video">
                       <div className="waves-block">
                         <div className="waves wave-1" />
@@ -118,7 +126,7 @@ class Hero extends Component {
                       </div>
                     </div>
                     <VideoModal videoId="bFYc54lb9kE" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
               </div> 

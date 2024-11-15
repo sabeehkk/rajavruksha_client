@@ -132,9 +132,10 @@ const CareerForm = () => {
           {errors.contact_no && <span className="error">{errors.contact_no}</span>}
         </div>
 
-        <div className="form" style={{ marginLeft: "1rem" }}>
-          <label  htmlFor="file">Upload CV *</label>
+        <div className="form" style={{ marginLeft: "1rem" ,backgroundColor:'#ffffff'}}>
+          <label  htmlFor="file" >Upload CV *</label>
           <input 
+          style={{backgroundColor:'#ffffff' }}
             type="file"
             id="file"
             name="file"

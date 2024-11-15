@@ -6,8 +6,8 @@ import Footer from '../../components/footer'
 import bg from "../../components/assets/editedprojectpic.jpg";
 
 
-
 const ProjectPage =() => {
+
     return(
         <Fragment>
             <Header/> 

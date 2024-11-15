@@ -11,17 +11,19 @@ import BlogSection from '../../components/BlogSection';
 import Footer from '../../components/footer';
 import Container from "../Status/status.jsx"
 import OngoingProjects from '../../components/ourOnGoingProjects/ourOnGoingProjects.jsx';
+import NewCarousel from '../../components/newCarousel/newCarousel.jsx';
 
 const HomePage =() => {
     return(
         <Fragment>
             <Header/>
             <Hero/>
-            <Container />
+            {/* <NewCarousel/> */}
+            <Container/>
             <About text={''}/>
+            {/* <NewOngoing/> */}
             <OngoingProjects/>
             <ServiceSection/>
-            
             {/* <OngoingProjects/> */}
             {/* <Partners/> */}
             {/* <ProjectSection/> */}

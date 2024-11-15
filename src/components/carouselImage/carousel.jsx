@@ -67,18 +67,18 @@ class TestimonialNewSlider extends Component {
       
       },
       {
-      carouselImg :'https://rajavrukshagroup.in/wp-content/uploads/2023/11/New-Project-18.webp'
+      carouselImg :'https://images.pexels.com/photos/461960/pexels-photo-461960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
       
       },
       {
-      carouselImg :'https://rajavrukshagroup.in/wp-content/uploads/2023/11/New-Project-18.webp'
+      carouselImg :'https://images.pexels.com/photos/1382102/pexels-photo-1382102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       
       },
       {
       name: 'Roshan Kumar',
       telling: 'Exceptional service and integrity define Rajavruksha. The process of buying our farm was seamless and gratifying.',
       proffession:'Land Surveyor',
-       carouselImg :'https://rajavrukshagroup.in/wp-content/uploads/2023/11/New-Project-18.webp'
+       carouselImg :'https://images.pexels.com/photos/945630/pexels-photo-945630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
       },
       ];
       
@@ -143,52 +143,7 @@ class TestimonialNewSlider extends Component {
       </div>
     );
   }
-  // render() {
-  //   const settings = {
-  //     dots: true,
-  //     infinite: true, 
-  //     arrows: false,
-  //     speed: 1200,
-  //     slidesToShow: 3,
-  //     slidesToScroll: 1,
-  //     autoplay: true,
-  //     autoplaySpeed: 2500,
-  //     fade: false,
-  //     responsive: [
-  //       { breakpoint: 1030, settings: { slidesToShow: 2 } },
-  //       { breakpoint: 850, settings: { slidesToShow: 2 } },
-  //       { breakpoint: 700, settings: { slidesToShow: 1 } },
-  //       { breakpoint: 600, settings: { slidesToShow: 1 } },
-  //       { breakpoint: 480, settings: { slidesToShow: 1 } },
-  //     ],
-  //   };
-
-  //   const imageSlides = [
-  //     "https://rajavrukshagroup.in/wp-content/uploads/2023/10/raj5.webp",
-  //     "https://rajavrukshagroup.in/wp-content/uploads/2023/10/raj4.webp",
-  //     "https://rajavrukshagroup.in/wp-content/uploads/2023/10/raj5.webp",
-  //   ];
-
-  //   return (
-  //     <section className="testimonial-new-slider-area" data-aos="fade-up">
-  //       <div className="container">
-  //         <div className="row">
-  //           <div className="col-lg-12">
-  //             <div className="testimonial-new-slider">
-  //               <Slider {...settings}>
-  //                 {imageSlides.map((imgUrl, index) => (
-  //                   <div className="testimonial-new-slide" key={index}>
-  //                     <img src={imgUrl} alt={`slide-${index}`} />
-  //                   </div>
-  //                 ))}
-  //               </Slider>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </section>
-  //   );
-  // }
+  
 }
 
 export default TestimonialNewSlider;

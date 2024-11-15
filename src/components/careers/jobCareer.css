@@ -32,11 +32,11 @@
   line-height: 1.5;
 }
 
-.list-methods{
+.list-methods {
   margin-bottom: 10px;
 }
 
-.list-methods li{
+.list-methods li {
   list-style-type: disc;
   margin-left: 40px;
 }
@@ -120,6 +120,12 @@ input::placeholder {
   background: #ff9800;
 }
 
+.file-pdf p {
+  color: red;
+  font-size: 0.7rem;
+  line-height: normal;
+  padding-left: -37px;
+}
 
 .car-ind {
   padding: 2rem;

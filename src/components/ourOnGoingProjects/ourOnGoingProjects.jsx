@@ -1,34 +1,36 @@
 import React from 'react';
 import './ourOnGoingProjects.css'
-
+import { Link } from 'react-router-dom/cjs/react-router-dom';
+import newPic from "../../components/assets/8.jpg"
 export default function SignatureProjects() {
   return (
     <div className="container-signature" style={{paddingTop:'100px'}}>
       <div className="content-wrappers">
-        <div className="text-content">
+        <div className="text-content " data-aos="fade-right">
           <h1 className="title">
-            Our<br/>
-            Ongoing<br />
+            Our<br className="hide-on-small-screen" /> 
+            Ongoing<br className="hide-on-small-screen" />
             Projects
           </h1>
           <p className="description">
           Farmland is not just a dream; it's a sound financial investment with growing demand in the market.
           </p>
           <div className="small-gallery">
-            <div className="gallery-image">
-                <img src="https://img.freepik.com/free-photo/sunrise-farmland_181624-15672.jpg?t=st=1731255777~exp=1731259377~hmac=1b21efdd4b5208ae4e3283a4d31e9482d2a33b571799fe89d8179dc52e59d7e0&w=1060" alt="" />
-            </div>
-            <div className="gallery-image">
-            <img src="https://img.freepik.com/free-photo/sunrise-farmland_181624-15672.jpg?t=st=1731255777~exp=1731259377~hmac=1b21efdd4b5208ae4e3283a4d31e9482d2a33b571799fe89d8179dc52e59d7e0&w=1060" alt="" />
-
-            </div>
-            {/* <div className="gallery-image"></div> */}
+          <Link to="/sylvan-retreat" className="gallery-image">
+              <h3>sylvan retreat</h3>
+              <img src={newPic} alt="sylvan retreat" />
+            </Link>
+          <Link to="/eco-nest" className="gallery-image">
+              <h3>eco nest</h3>
+              <img src="https://images.pexels.com/photos/26150406/pexels-photo-26150406/free-photo-of-aerial-view-of-a-country-road-stretching-past-vast-green-fields.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="eco next" />
+            </Link>
           </div>
         </div>
-        <div className="featured-image-wrapper">
-          <img src="https://img.freepik.com/free-photo/countryside-field-sunny-day-countryside_181624-23127.jpg?t=st=1731255565~exp=1731259165~hmac=aaa61a690bb91df716e6d0620bd87262ad4519edb6651450a542f202c28091dd&w=740" className="featured-image" />
+
+        <div className="featured-image-wrapper"  data-aos="fade-left">
+          <img src="https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg" className="featured-image" />
           <a href="/projects" className="discover-more-button">
-          Read More
+          Read More         
             <span className="arrow-icon">→</span>
           </a>
         </div>

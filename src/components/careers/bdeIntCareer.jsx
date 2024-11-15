@@ -16,8 +16,33 @@ const BdeInternCareer = () => {
         setFormData({ ...formData, [name]: value });
     };
 
+    // const handleFileChange = (e) => {
+    //     setFormData({ ...formData, file: e.target.files[0] });
+    // };
     const handleFileChange = (e) => {
-        setFormData({ ...formData, file: e.target.files[0] });
+        const file = e.target.files[0];
+
+        // Validate file type
+        const allowedTypes = ['application/pdf']; // PDF
+        const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
+        // Check if file exists
+        if (file) {
+            // Validate file type
+            if (!allowedTypes.includes(file.type)) {
+                setErrors({ file: "Only PDF is allowed." });
+            }
+            // Validate file size
+            else if (file.size > maxSize) {
+                setErrors({ file: "File size must not exceed 5MB." });
+            }
+            else {
+                // Clear any existing errors
+                setErrors({ file: "" });
+                // Update form data with the selected file
+                setFormData({ ...formData, file });
+            }
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -144,14 +169,25 @@ const BdeInternCareer = () => {
 
                 <div className="form" style={{ marginLeft: "1rem" }}>
                     <label htmlFor="file">Upload CV *</label>
-                    <input
-                        type="file"
-                        id="file"
-                        name="file"
-                        ref={fileInputRef}
-                        onChange={handleFileChange}
-                        accept=".doc,.docx,.pdf"
-                    />
+                    <div style={{ display: "flex" }}>
+                        <div>
+                            <input
+                                type="file"
+                                id="file"
+                                name="file"
+                                ref={fileInputRef}
+                                onChange={handleFileChange}
+                                accept=".pdf"
+                            />
+                        </div>
+                        <div className="file-pdf">
+                            <p>
+                                * Please upload a file with the following format: <strong>.pdf</strong>.
+                                The file size should not exceed <strong>5MB</strong>.
+                            </p>
+                        </div>
+                    </div>
+
                     {errors.file && <span className="error" style={{ marginLeft: "0rem", marginTop: "-13px" }}>{errors.file}</span>}
                 </div>
 
