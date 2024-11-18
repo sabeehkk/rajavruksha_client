@@ -18,9 +18,7 @@ function NewCarousel() {
     e5,
     e4,
     e3,
-  ];
-
-
+  ] ;
   // const items = [
   //   "https://images.unsplash.com/photo-1630305106122-80b9ace010c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfHx3aWxsYSUyMHByb2plY3RzfGVufDB8fDB8fHww",
   //   "https://plus.unsplash.com/premium_photo-1728417204249-da7d4b047c8a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fE1hbmFnZWQlMjBGYXJtbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
@@ -28,8 +26,8 @@ function NewCarousel() {
   //   "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   //   "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
   // ];
-
   // Functions to go to the next or previous item
+
   const next = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
