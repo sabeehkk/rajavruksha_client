@@ -1,144 +1,260 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Button, Grid, FormHelperText } from "@mui/material";
+import "./style.css";
 
-class ContactForm extends Component {
-  state = {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     lastname: "",
-    events: "",
     notes: "",
-    error: {},
+    phone_no: ""
+  });
+
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    lastname: "",
+    notes: "",
+    phone_no: ""
+  });
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+
+  // Handle input changes and clear errors
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+
+    // Clear the error for that specific field
+    setError((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }));
   };
 
-  changeHandler = (e) => {
-    const error = this.state.error;
-    error[e.target.name] = "";
+  // Handle form submission
+  const submitHandler = async (e) => {
+    e.preventDefault(); // Prevent form reload
 
-    this.setState({
-      [e.target.name]: e.target.value,
-      error,
-    });
-  };
+    // Step 1: Prepare form errors
+    let formErrors = { ...error };
 
-  subimtHandler = (e) => {
-    e.preventDefault();
+    // Step 2: Validate each field
+    if (formData.name === "") formErrors.name = "Please enter name";
+    if (formData.email === "") {
+      formErrors.email = "Please enter email";
+    } else if (!emailRegex.test(formData.email)) {
+      formErrors.email = "Please enter a valid email address";
+    }
+    if (formData.subject === "") formErrors.subject = "Please enter subject";
+    if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
+    if (formData.notes === "") formErrors.notes = "Please enter note";
+    if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
 
-    const { name, email, subject, lastname, events, notes, error } = this.state;
+    // Step 3: Set error state
+    setError(formErrors);
 
-    if (name === "") {
-      error.name = "Please enter your name";
-    }
-    if (email === "") {
-      error.email = "Please enter your email";
-    }
-    if (subject === "") {
-      error.subject = "Please enter your subject";
-    }
-    if (lastname === "") {
-      error.lastname = "Please enter your Lastname";
-    }
-    if (events === "") {
-      error.events = "Select your event list";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
-    }
+    // Step 4: Check if there are errors
+    const hasErrors = Object.values(formErrors).some((err) => err !== "");
+    if (hasErrors) return; // Stop form submission if there are validation errors
 
-    if (error) {
-      this.setState({
-        error,
+    // Step 5: Proceed with form submission if no errors
+    try {
+      console.log("Preparing to send request to backend...");
+
+      const response = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          lastName: formData.lastname,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.notes,
+          phone_no: formData.phone_no
+        }),
       });
-    }
-    if (
-      error.name === "" &&
-      error.email === "" &&
-      error.email === "" &&
-      error.lastname === "" &&
-      error.subject === "" &&
-      error.events === "" &&
-      error.notes === ""
-    ) {
-      this.setState({
-        name: "",
-        email: "",
-        subject: "",
-        events: "",
-        notes: "",
-        error: {},
-      });
+
+      if (response.ok) {
+        // Handle success response
+        alert("Your message has been sent successfully!");
+
+        // Reset form data and error state
+        setFormData({
+          name: "",
+          lastname: "",
+          email: "",
+          subject: "",
+          notes: "",
+          phone_no: ""
+        });
+
+        setError({
+          name: "",
+          email: "",
+          subject: "",
+          lastname: "",
+          notes: "",
+          phone_no: ""
+        });
+      } else {
+        // Handle unsuccessful response (server error, etc.)
+        alert("There was an error sending the message.");
+      }
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("There was a problem with the server.");
     }
   };
 
-  render() {
-    const { name, email, subject, lastname, error } = this.state;
+  return (
+    <div className="contact-form-height">
+      <form onSubmit={submitHandler} className="form">
+        <Box
+          component="form"
+          sx={{
+            '& > :not(style)': {
+              width: {
+                xs: '50%',  // For screens smaller than 600px (Mobile)
+                sm: '80%',   // For screens 600px to 960px (Tablet)
+                md: '80%'    // For screens 960px and larger (Desktop)
+              }
+            }
+          }}
+          noValidate
+          autoComplete="off"
 
-    return (
-      <form onSubmit={this.subimtHandler} className="form">
-        <div className="row">
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                value={name}
-                onChange={this.changeHandler}
-                type="text"
+        >
+          {/* First Name and Last Name in the same row */}
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="first-name"
+                label="First Name"
+                variant="standard"
+                value={formData.name}
+                onChange={changeHandler}
                 name="name"
-                placeholder="Name"
+                fullWidth
+                error={!!error.name}
               />
-              <p>{error.name ? error.name : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                value={lastname}
-                onChange={this.changeHandler}
-                type="text"
+              {error.name && <FormHelperText error>{error.name}</FormHelperText>}
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="last-name"
+                label="Last Name"
+                variant="standard"
+                value={formData.lastname}
+                onChange={changeHandler}
                 name="lastname"
-                placeholder="Lastname"
+                fullWidth
+                error={!!error.lastname}
               />
-              <p>{error.lastname ? error.lastname : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                onChange={this.changeHandler}
-                value={email}
-                type="email"
+              {error.lastname && <FormHelperText error>{error.lastname}</FormHelperText>}
+            </Grid>
+          </Grid>
+
+          {/* Email and Phone No in the same row */}
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="email"
+                label="Email"
+                variant="standard"
+                value={formData.email}
+                onChange={changeHandler}
                 name="email"
-                placeholder="Email"
+                fullWidth
+                error={!!error.email}
               />
-              <p>{error.email ? error.email : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-field">
-              <input
-                onChange={this.changeHandler}
-                value={subject}
-                type="text"
+              {error.email && <FormHelperText error>{error.email}</FormHelperText>}
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="phone-no"
+                label="Phone No"
+                variant="standard"
+                type="number"
+                value={formData.phone_no}
+                onChange={changeHandler}
+                name="phone_no"
+                fullWidth
+                error={!!error.phone_no}
+              />
+              {error.phone_no && <FormHelperText error>{error.phone_no}</FormHelperText>}
+            </Grid>
+          </Grid>
+
+          {/* Subject in a new row */}
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                id="subject"
+                label="Subject"
+                variant="standard"
+                value={formData.subject}
+                onChange={changeHandler}
                 name="subject"
-                placeholder="Subject"
+                fullWidth
+                error={!!error.subject}
               />
-              <p>{error.subject ? error.subject : ""}</p>
-            </div>
-          </div>
-          <div className="col-lg-12 col-sm-12">
-            <div className="form-field">
-              <textarea name="message" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="contact-form-action">
-              <button className="form-button" type="submit">
+              {error.subject && <FormHelperText error>{error.subject}</FormHelperText>}
+            </Grid>
+          </Grid>
+
+          {/* Message in a new row */}
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                id="notes"
+                label="Notes"
+                variant="standard"
+                multiline
+                name="notes"
+                value={formData.notes}
+                onChange={changeHandler}
+                rows={4}
+                fullWidth
+                error={!!error.notes}
+              />
+              {error.notes && <FormHelperText error>{error.notes}</FormHelperText>}
+            </Grid>
+          </Grid>
+
+          {/* Submit Button */}
+        </Box>
+        <div className="contact-button mb-5">
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+              >
                 Send Message
-              </button>
-            </div>
-          </div>
+              </Button>
+            </Grid>
+          </Grid>
         </div>
       </form>
-    );
-  }
-}
+    </div>
+  );
+};
+
 export default ContactForm;
