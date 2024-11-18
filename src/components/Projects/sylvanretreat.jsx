@@ -58,7 +58,7 @@ function Sylvanretreat() {
               <div className="row">
                 <div className="col-lg-3 col-md-6 col-sm-12">
                   <div className="project-overview-box">
-                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/planting.png'} alt="Expertise in Agriculture" />
+                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/planting.png'} alt="Expertise in Agriculture" className='syl-img'/>
                     <h5>Expertise in Agriculture</h5>
                     <p>Our team of agricultural experts is   ready to assist and advise you in every step of your farming journey.</p>
                   </div>
@@ -66,7 +66,7 @@ function Sylvanretreat() {
                 
                 <div className="col-lg-3 col-md-6 col-sm-12">
                   <div className="project-overview-box">
-                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/earning.png'} alt="Project time" />
+                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/earning.png'} alt="Project time" className='syl-img'/>
                     <h5>Investment Potential
                     </h5>
                     <p>Farmland is not just a dream; it's a sound financial investment with growing demand in the market.</p>
@@ -74,7 +74,7 @@ function Sylvanretreat() {
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12">
                   <div className="project-overview-box">
-                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/planet-earth.png'} alt="People worked" />
+                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/planet-earth.png'} alt="People worked" className='syl-img' />
                     <h5>Sustainability
                     </h5>
                     <p>We're committed to sustainable farming practices and environmental conservation.
@@ -83,7 +83,7 @@ function Sylvanretreat() {
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12">
                   <div className="project-overview-box">
-                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/compliance.png'} alt="Project cost" />
+                    <img src={'https://rajavrukshagroup.in/wp-content/uploads/2023/11/compliance.png'} alt="Project cost" className='syl-img'/>
                     <h5>Legal Compliance</h5>
                     <p>Hassel free process in terms of your documentations that carries from our experts</p>
                   </div>

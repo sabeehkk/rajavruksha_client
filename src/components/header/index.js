@@ -7,6 +7,7 @@ import "./style.css";
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [showDropdown,setShowDropdown] = useState(false);
 
   const SubmitHandler = (e) => {
     e.preventDefault();
@@ -51,8 +52,8 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link to="/">Career</Link>
-                      <ul>
+                      <Link to="#">Career</Link>
+                      <ul className="career-dropdown">
                         <li><Link to="bdeCareerForm">BDE</Link></li>
                         <li><Link to="bdeIntern">BDE Intern</Link></li>
                       </ul>

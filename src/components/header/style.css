@@ -93,6 +93,10 @@
 	position: relative
 }
 
+.mainmenu .career-dropdown{
+	margin-top:-30px
+}
+
 .mainmenu ul li a {
 	font-weight: 500;
 	color: #000;
@@ -135,7 +139,6 @@
 
 .mainmenu ul li ul {
 	padding: 30px;
-
 	position: absolute;
 	top: 120%;
 	left: 0;
@@ -164,7 +167,6 @@
 
 .mainmenu ul li ul li a {
 	padding: 30px;
-
 	display: block;
 	padding: 14px 20px;
 	text-transform: capitalize;
