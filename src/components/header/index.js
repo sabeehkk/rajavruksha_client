@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
 import Logo from '../../components/assets/RRPL_Horizontal.png'
-
 import "./style.css";
 
 const Header = () => {
@@ -15,7 +14,6 @@ const Header = () => {
   const onClick = (e) => {
     e.preventDefault();
   };
-
 
   return (
     <header className="header" style={{ paddingLeft: '20px' }}>
