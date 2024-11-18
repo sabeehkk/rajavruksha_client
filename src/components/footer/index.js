@@ -92,42 +92,7 @@ const Footer = () => {
                     </button>
                   </form>
                 </div>
-                {/* <ul className="footer-social">
-                  <li>
-                    <Link
-                      to="#"
-                      // onClick={() => window.open('https://www.youtube.com/@rajavruksharealtorspvtltd.', '_blank')}
-                      onClick={() => window.open('https://www.youtube.com/@Rajavruksha_Realtors', '_blank')}
-
-                    >
-                      <i class="fab fa-youtube"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
-                    >
-                      <i className="fab fa-facebook-f" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="#"
-                      onClick={() => window.open('https://www.instagram.com/rajavruksha', '_blank')}
-                    >
-                      <i className="fab fa-instagram" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/"
-                      onClick={() => window.open('https://x.com/rajavruksha', '_blank')}
-                    >
-                      <i className="fab fa-twitter" />
-                    </Link>
-                  </li>
-                </ul> */}
+               
 
                 	<div  style={{paddingTop:'30px'}} class="social">
               <ul class="no-list">
@@ -159,7 +124,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <p>&copy; Copyright © 2024 Rajavruksha. All rights reserved.</p>
+              <p className="foote-copyright">&copy; Copyright © 2024 Rajavruksha. All rights reserved.</p>
             </div>
           </div>
         </div>

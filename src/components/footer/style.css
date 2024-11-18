@@ -4,13 +4,16 @@
 }
 
 .footer-top {
-	background: #000;
+	background: #0b3d2c;
 	padding: 70px 0
 }
 
 .single-footer h3 {
 	color: #fff;
 	margin-bottom: 20px
+}
+.foote-copyright{
+	color: white;
 }
 
 .single-footer li {
@@ -141,9 +144,9 @@ ul.footer-contact {
 }
 
 .copyright {
-	padding: 30px 0;
+	padding: 21px 0;
 	text-align: center;
-	background: #000
+	background: #b79641
 }
 
 .copyright p {
