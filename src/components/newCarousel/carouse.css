@@ -124,12 +124,12 @@ li img{
 
 .slider-prev-new{
   left: -30; /* Align to the left side */
-  margin-top: 150px;
+  margin-top: 163px;
 }
 
 .slider-next-new {
   right: 290px; /* Align to the right side */
-  margin-top: 150px;
+  margin-top: 163px;
 }
 
 .slider-prev-new::before{
