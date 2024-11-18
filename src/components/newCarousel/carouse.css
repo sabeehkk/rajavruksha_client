@@ -86,6 +86,7 @@
     font-weight: 700;
 } */
 
+
 .slider-new{
   display: flex;
   flex-direction: row;
@@ -94,9 +95,6 @@
   position: relative;
   margin: 0 auto;
 }
-
-
-
 
 
 li img{

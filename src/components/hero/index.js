@@ -71,7 +71,7 @@ class Hero extends Component {
                     >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{fontSize:'50px'}}>
+                    <h2 style={{fontSize:'39px'}}>
                      Plow Your Capital into<br/>
                       Farmland for Growth
                     </h2>
@@ -101,7 +101,7 @@ class Hero extends Component {
                 <div className="container">
                   <div className="hero-text">
                     
-                    <h2 style={{color:'black',fontFamily:'Areal,sans-serif',fontSize:'35px'}}>
+                    <h2 style={{color:'black',fontFamily:'Areal,sans-serif',fontSize:'30px'}}>
                     Invest in Farmland for <br/>
                     Long-Term Prosperity
                     </h2>
